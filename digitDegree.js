@@ -1,11 +1,8 @@
 function digitDegree(n) {
-    var arr = n.split("")
-    lengthOfSumArr([1, 2, 3, 4])
+    c = 0;
+    while (n.toString().length > 1) {
+        n = n.toString().split("").reduce((x, y) => Number(x) + Number(y))
+        c++;
+    }
+    return c;
 }
-
-function lengthOfSumArr(arr) {
-    var total = arr.reduce((pre, curr) => pre + curr);
-    return (total + "").length;
-}
-
-digitDegree(100)
